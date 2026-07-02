@@ -20,8 +20,8 @@
 +	__u8			fast_forwarded:1;
 +#endif
  #if defined(CONFIG_NET_SCHED) || defined(CONFIG_NET_XGRESS)
- 	__u16			tc_index;	/* traffic control index */
- #endif
+ 	__u8			tc_at_ingress:1;
+ 	__u8			tc_skip_classify:1;
 --- a/include/net/netfilter/nf_conntrack_ecache.h
 +++ b/include/net/netfilter/nf_conntrack_ecache.h
 @@ -68,6 +68,8 @@ struct nf_ct_event_notifier {
