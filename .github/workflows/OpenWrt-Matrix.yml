@@ -70,6 +70,9 @@ jobs:
 
   build:
     needs: setup
+    permissions:
+      contents: write
+      actions: write
     env: # default values, will be overridden later
       seed: dummy
       artifact_prefix: dummy
